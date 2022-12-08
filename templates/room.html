@@ -60,11 +60,6 @@ body {
 
 <div id="display">
 
-<!-- <div class="container darker">
-  <b>Tom</b><p>Hello Everyone, How Are You Guys Doing?</p>
-  <span class="time-left">20th, April 2021</span>
-</div> -->
-
 </div>
 
 <script>
@@ -130,13 +125,25 @@ setInterval(function(){
         {% csrf_token %}
         <input type="hidden" name="username" id="username" value="{{username}}"/>
         <input type="hidden" name="room_id" id="room_id" value="{{room_details.id}}"/>
-        <input type="text" name="message" id="message" width="100px" />
-        <input type="submit" value="Send">
+
+        <p id = "typing" ></p>
+        <input type="text" name="message" id="message" width="100px" onclick="istyping()"/>
+        <input type="submit" value="Send" onclick="resetText()">
     </form>
 </div>
 
-
 </body>
+
+<script>
+    function istyping() {
+        $("#typing").text("Utilizatorul {{username}} scrie");
+    }
+
+    function resetText(){
+
+        $("#typing").text("");
+    }
+</script>
 
 <script type="text/javascript">
   $(document).on('submit','#post-form',function(e){

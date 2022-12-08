@@ -1,6 +1,12 @@
+from urllib import request
+
+from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
-from scrumboard.models import Room, Message
+from pyexpat.errors import messages
+
+from scrumboard.models import Room, Message, Utilizatori
+
 
 # Create your views here.
 def home(request):
@@ -40,3 +46,18 @@ def getMessages(request, room):
 
     messages = Message.objects.filter(room=room_details.id)
     return JsonResponse({"messages":list(messages.values())})
+
+
+def signin(request):
+    username = request.POST["username"]
+    password = request.POST["password"]
+    user = authenticate(request, name=username, password=password)
+    if user!=None:
+        login(request, user)  # request.user == user
+        return redirect("/home")
+            # attempt = request.session.get("attempt") or 0
+            # request.session['attempt'] += 1
+            # return redirect("/invalid-password")
+    else:
+        request.session['invalid_user'] = 1
+    return render(request, 'login.html')

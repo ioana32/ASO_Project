@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5652f004-002a-4542-b739-1bd047c285b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scrumboard/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrumboard/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrumboard/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/room.html" afterDir="false" />
+    <list default="true" id="5652f004-002a-4542-b739-1bd047c285b3" name="Changes" comment="chat">
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrumboard/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrumboard/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrumboard/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrumboard/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrumboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrumboard/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrumboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrumboard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +38,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ASO\tuto_django\project\templates\registration" />
       <recent name="D:\ASO\tuto_django\project\templates" />
     </key>
   </component>
@@ -55,6 +51,14 @@
       <option name="presentableId" value="Default" />
       <updated>1666626923408</updated>
     </task>
+    <task id="LOCAL-00001" summary="chat">
+      <created>1670362960047</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670362960047</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -67,5 +71,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chat" />
+    <option name="LAST_COMMIT_MESSAGE" value="chat" />
   </component>
 </project>
