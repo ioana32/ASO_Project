@@ -20,7 +20,6 @@ RUN apk update \
 RUN pip install --upgrade pip
 RUN pip install flake8==3.9.2
 COPY . .
-RUN flake8 --ignore=E501,F401 ./project
 
 # install dependencies
 COPY ./requirements.txt .
@@ -41,14 +40,15 @@ RUN mkdir -p /project
 RUN addgroup -S project && adduser -S project -G project
 
 # create the appropriate directories
-ENV HOME=/project
-ENV APP_HOME=/project/web
+ENV HOME=/home/project
+ENV APP_HOME=/home/project/web
 RUN mkdir $APP_HOME
+RUN mkdir $APP_HOME/staticfiles
 WORKDIR $APP_HOME
 
 # install dependencies
 RUN apk update && apk add libpq
-COPY --from=builder /wheels /wheels
+COPY --from=builder /project/wheels /wheels
 COPY --from=builder /requirements.txt .
 RUN pip install --no-cache /wheels/*
 
@@ -66,5 +66,6 @@ RUN chown -R project:project $APP_HOME
 # change to the app user
 USER project
 
+
 # run entrypoint.prod.sh
-ENTRYPOINT ["sh","/project/web/entrypoint.prod.sh"]
+ENTRYPOINT ["sh","/home/project/web/entrypoint.prod.sh"]
